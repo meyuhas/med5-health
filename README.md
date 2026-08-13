@@ -1,4 +1,4 @@
-# Med5 — 5med.health
+# Med5 — med5.health
 
 Static landing page for the Med5 genetics education platform (Prof. Eitan Friedman).
 
@@ -29,7 +29,7 @@ Publish directory is the repo root (`netlify.toml`). No build step.
 The contact form uses Netlify Forms (`data-netlify="true"`) — submissions appear under
 Site settings → Forms once deployed.
 
-## DNS — 5med.health (registrar: Spaceship)
+## DNS — med5.health (registrar: Spaceship)
 
 Two options, confirm exact values in the live Netlify UI before changing anything:
 
