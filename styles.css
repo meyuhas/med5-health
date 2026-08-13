@@ -499,3 +499,8 @@ a  { color: var(--navy); }
 
 /* Faculty */
 .faculty__role { font-size: .9rem; color: var(--blue); font-weight: 600; }
+
+/* Four-up video grid keeps two per row on desktop */
+@media (min-width: 821px) {
+  .watch__grid--four { grid-template-columns: repeat(2, 1fr); }
+}
