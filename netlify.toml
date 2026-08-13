@@ -11,3 +11,6 @@
   [headers.values]
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
+    # STAGING: keeps the review URL out of search results.
+    # Remove this line (and robots.txt) before going live on med5.health.
+    X-Robots-Tag = "noindex, nofollow"
