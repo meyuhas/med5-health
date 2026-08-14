@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — Med5</title>
+<meta name="description" content="Sign in to your Med5 course library.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/assets/logo.png">
+<link rel="stylesheet" href="/styles.css?v=6">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__brand" href="/"><img src="/assets/logo-mark.png" alt="Med5 — Clinical Learning in Five"></a>
+  <nav class="nav__links">
+    <a href="/#library">Library</a>
+    <a href="/#for-organizations">For Organizations</a>
+    <a href="/#contact" class="btn btn--sm">Request access</a>
+  </nav>
+</header>
+
+<main class="auth">
+  <div class="auth__card">
+    <p class="eyebrow">Member access</p>
+    <h1>Sign in to your library</h1>
+    <p class="lede">Accounts are being issued to course members and pilot institutions. Sign-in opens with the first cohort.</p>
+
+    <form class="auth__form" aria-describedby="auth-note">
+      <label class="sr-only" for="auth-email">Email address</label>
+      <input id="auth-email" type="email" placeholder="you@institution.org" autocomplete="email" disabled>
+      <label class="sr-only" for="auth-pass">Password</label>
+      <input id="auth-pass" type="password" placeholder="Password" autocomplete="current-password" disabled>
+      <button class="btn" type="button" disabled>Sign in</button>
+    </form>
+
+    <p id="auth-note" class="fineprint">Sign-in is not active yet. To be included in the first cohort,
+      <a href="/#contact">request access</a>.</p>
+  </div>
+
+  <aside class="auth__aside">
+    <h2>What members get</h2>
+    <ul class="ticks">
+      <li>The full track library, released in groups of eight lessons</li>
+      <li>Knowledge checks at the end of each group</li>
+      <li>Progress that follows you across devices</li>
+      <li>New lessons as tracks expand</li>
+    </ul>
+    <p class="fineprint"><a href="/course/">Preview the course experience →</a></p>
+  </aside>
+</main>
+
+<footer class="footer">
+  <img src="/assets/logo.png" alt="Med5">
+  <p class="footer__meta">© <span id="year"></span> Med5 · <a href="mailto:hello@med5.health">hello@med5.health</a></p>
+</footer>
+
+<script src="/main.js?v=6"></script>
+</body>
+</html>
