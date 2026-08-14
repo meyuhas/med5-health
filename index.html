@@ -10,7 +10,7 @@
 <meta property="og:image" content="/assets/hero.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="/assets/logo.png">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/styles.css?v=3">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
     <a href="#watch">Watch</a>
     <a href="#library">Library</a>
     <a href="#how">How it works</a>
-    <a href="#organizations">For Organizations</a>
+    <a href="#for-organizations">For Organizations</a>
     <a href="#contact" class="btn btn--sm">Request access</a>
   </nav>
 </header>
@@ -29,18 +29,41 @@
 
   <section class="hero">
     <div class="hero__copy">
-      <p class="eyebrow">Clinical micro-learning</p>
-      <h1>Complex science.<br><span>Clear clinical meaning.</span><br>Five minutes.</h1>
-      <p class="lede">Med5 transforms complex medical science into focused, clinically relevant five-minute learning. Built for busy clinicians — to understand emerging concepts quickly, connect them to clinical practice, and communicate them more clearly to patients.</p>
-      <div class="hero__cta">
-        <a href="#library" class="btn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v14H4zM13 5h7v14h-7z"/></svg>
-          Explore the library
-        </a>
-        <a href="#watch" class="btn btn--ghost">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7l8 5-8 5V7z"/></svg>
-          Watch a sample lesson
-        </a>
+      <div class="switch" role="tablist" aria-label="Choose your view">
+        <button role="tab" id="tab-org" aria-controls="view-org" aria-selected="true" data-view="org">For organizations</button>
+        <button role="tab" id="tab-clin" aria-controls="view-clin" aria-selected="false" data-view="clin">For clinicians</button>
+      </div>
+
+      <div class="view" id="view-org" role="tabpanel" aria-labelledby="tab-org">
+        <p class="eyebrow">Clinical micro-learning for teams</p>
+        <h1>Keep your clinical teams<br><span>current in five minutes.</span></h1>
+        <p class="lede">Med5 turns complex, fast-moving medical science into focused modules your clinicians will actually finish — expert-led, clinically reviewed, and deployable across a hospital, a university or a laboratory network.</p>
+        <div class="hero__cta">
+          <a href="#contact" class="btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4V5z"/></svg>
+            Talk to us about your teams
+          </a>
+          <a href="#organizations" class="btn btn--ghost">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v14H4zM13 5h7v14h-7z"/></svg>
+            Institutional access
+          </a>
+        </div>
+      </div>
+
+      <div class="view" id="view-clin" role="tabpanel" aria-labelledby="tab-clin" hidden>
+        <p class="eyebrow">Clinical micro-learning</p>
+        <h1>Complex science.<br><span>Clear clinical meaning.</span><br>Five minutes.</h1>
+        <p class="lede">Med5 transforms complex medical science into focused, clinically relevant five-minute learning. Built for busy clinicians — to understand emerging concepts quickly, connect them to clinical practice, and communicate them more clearly to patients.</p>
+        <div class="hero__cta">
+          <a href="#library" class="btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h7v14H4zM13 5h7v14h-7z"/></svg>
+            Explore the library
+          </a>
+          <a href="#watch" class="btn btn--ghost">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7l8 5-8 5V7z"/></svg>
+            Watch a sample lesson
+          </a>
+        </div>
       </div>
     </div>
 
@@ -63,7 +86,7 @@
       </li>
       <li>
         <span class="chip"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.5-7-9a4 4 0 017-2.6A4 4 0 0119 11c0 4.5-7 9-7 9z"/></svg></span>
-        <span><strong>Clinically focused</strong><em>built for practice</em></span>
+        <span><strong>Any language</strong><em>clinically reviewed</em></span>
       </li>
       <li>
         <span class="chip"><svg viewBox="0 0 24 24"><path d="M12 4l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 9.7l5.4-.8z"/></svg></span>
@@ -336,8 +359,40 @@
         <h3>Laboratories &amp; healthcare organizations</h3>
         <p>Help clinicians understand and communicate complex medical concepts.</p>
       </article>
+      <article>
+        <h3>Any language</h3>
+        <p>Deliver the same reviewed curriculum in the language your teams work in. <a href="#languages">How localization works →</a></p>
+      </article>
     </div>
     <p class="library__all"><a href="#contact">Explore institutional access →</a></p>
+  </section>
+
+  <section id="languages" class="lang">
+    <div class="section-head">
+      <p class="eyebrow">Localization</p>
+      <h2>One curriculum.<br><span>Every language.</span></h2>
+      <p class="lede">The same clinically reviewed lesson can be delivered in the language your clinicians actually think in — without reshooting, rescheduling or waiting on a production calendar.</p>
+    </div>
+
+    <div class="lang__grid">
+      <article>
+        <p class="eyebrow">The science is human</p>
+        <h3>Written and reviewed by Prof. Friedman</h3>
+        <p>Every lesson is scoped, written and scientifically approved by the faculty. Nothing reaches a clinician that a physician has not signed off on — the medical judgment is not automated, and never will be.</p>
+      </article>
+      <article>
+        <p class="eyebrow">The delivery is synthetic</p>
+        <h3>Produced with an AI presenter</h3>
+        <p>Lessons are presented by a synthetic presenter built with the faculty's consent and likeness. We say so openly: in medical education, how knowledge is produced is part of whether it can be trusted.</p>
+      </article>
+      <article>
+        <p class="eyebrow">The result is reach</p>
+        <h3>New languages in weeks, not seasons</h3>
+        <p>Adapting a track to a new language becomes an editorial task rather than a production one — which is what makes a national or institution-wide rollout realistic.</p>
+      </article>
+    </div>
+
+    <p class="lang__note">Language adaptation includes medical review by a clinician who works in that language. A translated lesson that is not clinically checked is not a Med5 lesson.</p>
   </section>
 
   <section id="contact" class="cta">
@@ -370,6 +425,6 @@
   <p class="footer__meta">© <span id="year"></span> Med5 · <a href="mailto:hello@med5.health">hello@med5.health</a></p>
 </footer>
 
-<script src="/main.js"></script>
+<script src="/main.js?v=3"></script>
 </body>
 </html>
