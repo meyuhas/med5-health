@@ -24,7 +24,9 @@ python3 -m http.server 4321
 
 ## Deploy (Cloudflare Pages)
 
-No build step. Build output directory: `/` (repo root).
+Cloudflare Pages project `med5-health`, connected to this repo — every push to
+`main` deploys. No build step; build output directory is `/`.
+Headers live in `_headers` (Pages ignores `netlify.toml`).
 
 The access form posts to `functions/api/subscribe.js`, a Cloudflare Pages Function that
 files the contact in Brevo. Set `BREVO_API_KEY` and `BREVO_LIST_ID` in the Pages project
