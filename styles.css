@@ -622,3 +622,10 @@ a  { color: var(--navy); }
   flex-basis: 100%; margin: 1rem 0 0;
   font-size: .92rem; color: #cfe0ff;
 }
+
+/* Credibility line */
+.proof {
+  max-width: 68ch; margin: .9rem 0 0;
+  padding-left: 1rem; border-left: 3px solid var(--blue);
+  font-size: .94rem; color: var(--muted);
+}
