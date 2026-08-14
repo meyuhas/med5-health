@@ -629,3 +629,30 @@ a  { color: var(--navy); }
   padding-left: 1rem; border-left: 3px solid var(--blue);
   font-size: .94rem; color: var(--muted);
 }
+
+/* Track identity — each track carries its own accent, scalable to new tracks */
+.track { position: relative; overflow: hidden; }
+.track::before {
+  content: ""; position: absolute; inset: 0 0 auto 0; height: 4px;
+  background: var(--track-accent, var(--blue));
+}
+.track--genetics  { --track-accent: #1f6bff; --track-tint: #eaf0fd; }
+.track--longevity { --track-accent: #0f9d76; --track-tint: #e7f6f1; }
+
+.track__label {
+  display: inline-block; margin: 0 0 .7rem;
+  padding: .3rem .75rem; border-radius: 999px;
+  background: var(--track-tint); color: var(--track-accent);
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+}
+.track header h3 { color: var(--ink); }
+.track__meta {
+  margin: .6rem 0 0; font-size: .84rem; color: var(--muted);
+  padding-top: .6rem; border-top: 1px solid var(--line);
+}
+.track__module {
+  margin: 1.2rem 0 .2rem; font-size: .78rem; font-weight: 700;
+  letter-spacing: .04em; color: var(--track-accent);
+}
+.track .lessons li:first-child { border-top: 0; }
+.track__cta { color: var(--track-accent); }
