@@ -22,12 +22,13 @@ Source files (`MED5.psd`, `BLUEPRINT/`) are git-ignored — they are large origi
 python3 -m http.server 4321
 ```
 
-## Deploy (Netlify)
+## Deploy (Cloudflare Pages)
 
-Publish directory is the repo root (`netlify.toml`). No build step.
+No build step. Build output directory: `/` (repo root).
 
-The contact form uses Netlify Forms (`data-netlify="true"`) — submissions appear under
-Site settings → Forms once deployed.
+The access form posts to `functions/api/subscribe.js`, a Cloudflare Pages Function that
+files the contact in Brevo. Set `BREVO_API_KEY` and `BREVO_LIST_ID` in the Pages project
+(Settings → Variables) — without them the form returns "not configured yet".
 
 ## DNS — med5.health (registrar: Spaceship)
 
@@ -35,12 +36,14 @@ Registered Aug 13, 2026 for 3 years (auto-renew on, renews Aug 13, 2029).
 Starting state: default nameservers `launch1.spaceship.net` / `launch2.spaceship.net`,
 zero custom records.
 
-Two options, confirm exact values in the live Netlify UI before changing anything:
+DNS is delegated to Cloudflare. In Spaceship → Nameservers & DNS → Custom nameservers,
+`launch*.spaceship.net` is replaced with:
 
-- **Netlify DNS (preferred)** — in Spaceship → Nameservers & DNS → Custom nameservers,
-  replace both `launch*.spaceship.net` entries with the four `dns*.pXX.nsone.net`
-  servers Netlify shows.
-- **Keep Spaceship DNS** — Advanced DNS → `A @ → <Netlify apex IP>` and
-  `CNAME www → <site>.netlify.app`.
+    matias.ns.cloudflare.com
+    nicole.ns.cloudflare.com
+
+Everything else — the site records, MX for mail, SPF/DKIM/DMARC — lives in the
+Cloudflare zone. Mail is received through Cloudflare Email Routing (forwarding only)
+and sent through Brevo, which also holds the marketing list.
 
 HTTPS is auto-provisioned (Let's Encrypt) once DNS resolves.

@@ -32,4 +32,36 @@ document.querySelectorAll(".yt").forEach(fig => {
   });
 });
 
+// Access request — posts to the Brevo-backed function without leaving the page
+const accessForm = document.getElementById("access-form");
+if (accessForm) {
+  const status = document.getElementById("form-status");
+  const submit = accessForm.querySelector("button[type=submit]");
+
+  accessForm.addEventListener("submit", async e => {
+    e.preventDefault();
+    submit.disabled = true;
+    show("Sending…");
+
+    try {
+      const res = await fetch(accessForm.action, { method: "POST", body: new FormData(accessForm) });
+      const body = await res.json().catch(() => ({}));
+      if (res.ok && body.ok) {
+        accessForm.reset();
+        show("Thank you — we'll be in touch.");
+      } else {
+        show(body.error || "Something went wrong. Email hello@med5.health and we'll sort it out.");
+      }
+    } catch {
+      show("No connection. Email hello@med5.health and we'll sort it out.");
+    }
+    submit.disabled = false;
+  });
+
+  function show(message) {
+    status.textContent = message;
+    status.hidden = false;
+  }
+}
+
 document.getElementById("year").textContent = new Date().getFullYear();

@@ -616,3 +616,9 @@ a  { color: var(--navy); }
 .check { border-top: 1px solid var(--line); padding-top: 1.4rem; }
 .check h2 { font-size: 1.25rem; }
 .check__q { margin: 0; padding-left: 1.1rem; color: var(--muted); font-size: .94rem; display: grid; gap: .5rem; }
+
+/* Form status */
+.form__status {
+  flex-basis: 100%; margin: 1rem 0 0;
+  font-size: .92rem; color: #cfe0ff;
+}

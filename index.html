@@ -10,7 +10,7 @@
 <meta property="og:image" content="/assets/hero.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="/assets/logo.png">
-<link rel="stylesheet" href="/styles.css?v=6">
+<link rel="stylesheet" href="/styles.css?v=7">
 </head>
 <body>
 
@@ -406,8 +406,7 @@
   <section id="contact" class="cta">
     <h2>Request access</h2>
     <p>For clinicians who want the library, and for laboratories, hospitals and universities exploring institutional access.</p>
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="company-hp" class="form">
-      <input type="hidden" name="form-name" value="contact">
+    <form id="access-form" class="form" method="POST" action="/api/subscribe">
       <p class="hp"><label>Leave this empty <input name="company-hp"></label></p>
       <label class="sr-only" for="email">Email address</label>
       <input id="email" type="email" name="email" placeholder="you@institution.org" required autocomplete="email">
@@ -422,6 +421,7 @@
       </select>
       <button class="btn" type="submit">Request access</button>
     </form>
+    <p class="form__status" id="form-status" role="status" hidden></p>
     <p class="fineprint">No newsletter, no sharing. We reply personally.</p>
   </section>
 
@@ -433,6 +433,6 @@
   <p class="footer__meta">© <span id="year"></span> Med5 · <a href="mailto:hello@med5.health">hello@med5.health</a></p>
 </footer>
 
-<script src="/main.js?v=6"></script>
+<script src="/main.js?v=7"></script>
 </body>
 </html>
