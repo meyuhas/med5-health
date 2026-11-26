@@ -13,7 +13,7 @@ tabs.forEach(tab => {
 // Deep links pick the matching view: #for-clinicians / #for-organizations
 function viewFromHash() {
   const target = { "#for-clinicians": "tab-clin", "#for-organizations": "tab-org" }[location.hash];
-  if (target) document.getElementById(target).click();
+  if (target) document.getElementById(target)?.click();
 }
 addEventListener("hashchange", viewFromHash);
 viewFromHash();

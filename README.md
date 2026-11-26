@@ -4,15 +4,17 @@ Static landing page for the Med5 genetics education platform (Prof. Eitan Friedm
 
 ## Structure
 
-- `index.html` — the whole page
+- `index.html` — home page
+- `oncogenetics.html`, `healthy-ageing.html` — course pages, served at `/oncogenetics` and `/healthy-ageing`
+- `sitemap.xml`, `robots.txt`, `404.html` — search indexing (update `lastmod` when a page changes)
 - `styles.css`, `main.js` — styling and the click-to-load YouTube embeds
 - `assets/logo*.png` — wordmark, extracted from `MED5.psd`
 - `assets/hero.jpg` — hero image
 - `assets/friedman.jpg` — portrait, frame from the Longevity lesson
 - `assets/course/*.jpg` — thumbnails for the course-platform preview
 
-Course content itself is **not** hosted here — the site links only to the two
-public YouTube videos (promo + Longevity lesson 1).
+Course content itself is **not** hosted here — lesson titles are listed, and the site embeds the
+public YouTube videos (two promos and two full lessons).
 
 Source files (`MED5.psd`, `BLUEPRINT/`) are git-ignored — they are large originals, not site assets.
 
