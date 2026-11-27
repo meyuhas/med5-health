@@ -14,7 +14,8 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* main.js adds .smooth after load, so arriving on a #link jumps straight there */
+html.smooth { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: var(--font);
@@ -345,7 +346,7 @@ a  { color: var(--navy); }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
-  html { scroll-behavior: auto; }
+  html.smooth { scroll-behavior: auto; }
 }
 
 /* Featured lesson (hero) */

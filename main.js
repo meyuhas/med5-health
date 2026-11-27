@@ -18,6 +18,9 @@ function viewFromHash() {
 addEventListener("hashchange", viewFromHash);
 viewFromHash();
 
+// Smooth scrolling only for in-page clicks, not for the initial jump from a link
+addEventListener("load", () => setTimeout(() => document.documentElement.classList.add("smooth"), 100));
+
 // YouTube facades — load the iframe only on click
 document.querySelectorAll(".yt").forEach(fig => {
   const btn = fig.querySelector(".yt__btn");
