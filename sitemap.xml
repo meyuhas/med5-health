@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://med5.health/</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-27</lastmod>
   </url>
   <url>
     <loc>https://med5.health/oncogenetics</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <video:video>
       <video:thumbnail_loc>https://i.ytimg.com/vi/ZsFO54RN5yI/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Polygenic risk scores and inherited cancer risk — free Med5 lesson</video:title>
@@ -17,7 +17,7 @@
   </url>
   <url>
     <loc>https://med5.health/healthy-ageing</loc>
-    <lastmod>2026-11-26</lastmod>
+    <lastmod>2026-11-27</lastmod>
     <video:video>
       <video:thumbnail_loc>https://i.ytimg.com/vi/nkNpjVzPCnA/maxresdefault.jpg</video:thumbnail_loc>
       <video:title>Lifespan, life expectancy, healthspan and healthy ageing — free Med5 lesson</video:title>
